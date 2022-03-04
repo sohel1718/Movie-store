@@ -1,0 +1,15 @@
+extends layout 
+block content
+    include header
+    div.create_container 
+      div.create_title Add a movie
+      form(action='/create' method='post')
+        input(type='text' required name='name' placeholder='movie name *')
+        input(type='text' required placeholder='Image Url *' name='image')
+        input(type='number' required placeholder='price *' name='price')
+        textarea(name="description" required cols="38" placeholder='description *' rows="3")
+        input(type='number' required name='imdbRating' placeholder='imdb rating *')
+        input(type='number' required placeholder='average rating *' name='averageRating')
+        button(type='submit') submit
+      div.error 
+        p.err-text #{message}

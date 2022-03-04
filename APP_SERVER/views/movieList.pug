@@ -1,0 +1,9 @@
+extends layout 
+block content
+    include header
+        div.list-container
+            div.list-wrapper 
+                each movie in movies
+                    a(class="box", href=`/movies/` + movie._id)
+                        img(src=movie.image alt='login' class='movie-image')
+                        span.movie-name #{movie.name}

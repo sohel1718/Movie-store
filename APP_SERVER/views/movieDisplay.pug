@@ -1,0 +1,14 @@
+extends layout 
+block content
+    include header
+    div.container
+        div.movie-box
+            img(src=movie.image alt='login' class='movie-image')
+            div.movie-details 
+                span Imdb Rating: #{movie.ratings.imdbRating} / 5
+                br
+                span Average Rating: #{movie.ratings.averageRating} / 5
+                h1.movie-title #{movie.name}
+                p.movie-title #{movie.description}
+                b Price: #{movie.price}
+
